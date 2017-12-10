@@ -60,28 +60,24 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func AdjustRange(_ sender: UISlider!) {
+        freq_range = Double(sender.value)
+        for osc_index in 0...5 {
+            osclist[2*osc_index + 1].frequency = max(5, osclist[2 * osc_index].frequency + Double(random(in: -100 ... 100)) * freq_range / 100)
+        }
+    }
+    
     
     @IBAction func ControlOscillators(_ sender: UISlider!) {
-        
-        if (sender.tag == 12) {
-            freq_range = Double(sender.value)
-            for osc_index in 0...5 {
-                osclist[2*osc_index + 1].frequency = max(5, osclist[2 * osc_index].frequency + Double(random(in: -100 ... 100)) * freq_range / 100)
-            }
+        let change_vol = sender.tag % 2
+        if (change_vol > 0) {
+            osclist[sender.tag - 1].amplitude = Double(sender.value) / 100
+            osclist[sender.tag].amplitude = Double(sender.value) / 100
         }
         else {
-            let change_vol = sender.tag % 2
-            print(change_vol)
-            if (change_vol > 0) {
-                osclist[sender.tag - 1].amplitude = Double(sender.value) / 100
-                osclist[sender.tag].amplitude = Double(sender.value) / 100
-            }
-            else {
-                osclist[sender.tag].frequency = Double(sender.value)
-                osclist[sender.tag + 1].frequency = max(5, osclist[sender.tag].frequency + Double(random(in: -100 ... 100)) * freq_range / 100)
-            }
+            osclist[sender.tag].frequency = Double(sender.value)
+            osclist[sender.tag + 1].frequency = max(5, osclist[sender.tag].frequency + Double(random(in: -100 ... 100)) * freq_range / 100)
         }
-        
     }
     
     
