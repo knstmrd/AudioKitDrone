@@ -37,12 +37,12 @@ class ViewController: UIViewController {
         osc4.frequency = 130
         osc5.frequency = 300
         osc6.frequency = 300
-        osc7.frequency = 1200
-        osc8.frequency = 1200
-        osc9.frequency = 3000
-        osc10.frequency = 3000
-        osc11.frequency = 6000
-        osc12.frequency = 6000
+        osc7.frequency = 400
+        osc8.frequency = 400
+        osc9.frequency = 250
+        osc10.frequency = 250
+        osc11.frequency = 300
+        osc12.frequency = 300
         osclist = [osc1, osc2, osc3, osc4, osc5, osc6, osc7, osc8, osc9, osc10, osc11, osc12]
         mixer.volume = 0.5
         AudioKit.output = mixer
@@ -67,17 +67,14 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func ControlOscillatorFrequency(_ sender: UISlider!) {
+        osclist[sender.tag].frequency = Double(sender.value)
+        osclist[sender.tag + 1].frequency = max(5, osclist[sender.tag].frequency + Double(random(in: -100 ... 100)) * freq_range / 100)
+    }
     
-    @IBAction func ControlOscillators(_ sender: UISlider!) {
-        let change_vol = sender.tag % 2
-        if (change_vol > 0) {
-            osclist[sender.tag - 1].amplitude = Double(sender.value) / 100
-            osclist[sender.tag].amplitude = Double(sender.value) / 100
-        }
-        else {
-            osclist[sender.tag].frequency = Double(sender.value)
-            osclist[sender.tag + 1].frequency = max(5, osclist[sender.tag].frequency + Double(random(in: -100 ... 100)) * freq_range / 100)
-        }
+    @IBAction func ControlOscillatorVolume(_ sender: UISlider!) {
+        osclist[sender.tag - 1].amplitude = Double(sender.value) / 100
+        osclist[sender.tag].amplitude = Double(sender.value) / 100
     }
     
     
