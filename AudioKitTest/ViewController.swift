@@ -23,6 +23,10 @@ class ViewController: UIViewController {
     var osc10 = AKOscillator()
     var osc11 = AKOscillator()
     var osc12 = AKOscillator()
+    var osc13 = AKOscillator()
+    var osc14 = AKOscillator()
+    var osc15 = AKOscillator()
+    var osc16 = AKOscillator()
     var freq_range = 5.0
     var osclist: [AKOscillator] = []
     
@@ -39,12 +43,17 @@ class ViewController: UIViewController {
         osc6.frequency = 300
         osc7.frequency = 400
         osc8.frequency = 400
-        osc9.frequency = 250
-        osc10.frequency = 250
-        osc11.frequency = 300
-        osc12.frequency = 300
-        osclist = [osc1, osc2, osc3, osc4, osc5, osc6, osc7, osc8, osc9, osc10, osc11, osc12]
-        mixer.volume = 0.5
+        
+        osc9.frequency = 10000
+        osc10.frequency = 10000
+        osc11.frequency = 11000
+        osc12.frequency = 11000
+        osc13.frequency = 12000
+        osc14.frequency = 12000
+        osc15.frequency = 14000
+        osc16.frequency = 14000
+        osclist = [osc1, osc2, osc3, osc4, osc5, osc6, osc7, osc8, osc9, osc10, osc11, osc12, osc13, osc14, osc15, osc16]
+        mixer.volume = 1.0;
         AudioKit.output = mixer
         AudioKit.start()
     }
@@ -77,6 +86,9 @@ class ViewController: UIViewController {
         osclist[sender.tag].amplitude = Double(sender.value) / 100
     }
     
+    @IBAction func ControlMixerVolume(_ sender: UISlider!) {
+        mixer.volume = Double(sender.value) / 100
+    }
     
     @IBAction func SoundToggle(_ sender: Any) {
         if osc1.isPlaying {

@@ -17,21 +17,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="40" minValue="30" maxValue="150" translatesAutoresizingMaskIntoConstraints="NO" id="O1w-ce-UYm">
-                                <rect key="frame" x="14" y="114" width="118" height="30"/>
+                            <slider opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="40" minValue="30" maxValue="150" translatesAutoresizingMaskIntoConstraints="NO" id="O1w-ce-UYm">
+                                <rect key="frame" x="14" y="97" width="118" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="ControlOscillatorFrequency:" destination="BYZ-38-t0r" eventType="valueChanged" id="q9h-Za-Fk2"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="130" minValue="100" maxValue="400" translatesAutoresizingMaskIntoConstraints="NO" id="Av6-SL-AHo">
-                                <rect key="frame" x="243" y="114" width="118" height="30"/>
+                            <slider opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="130" minValue="50" maxValue="400" translatesAutoresizingMaskIntoConstraints="NO" id="Av6-SL-AHo">
+                                <rect key="frame" x="14" y="185" width="118" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="ControlOscillatorFrequency:" destination="BYZ-38-t0r" eventType="valueChanged" id="QpL-pg-gId"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="SJl-7X-7aI">
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="SJl-7X-7aI">
                                 <rect key="frame" x="128" y="58" width="118" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
@@ -46,74 +46,109 @@
                                     <action selector="SoundToggle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LEc-uM-9Xd"/>
                                 </connections>
                             </button>
-                            <slider opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Eof-7D-jWW">
-                                <rect key="frame" x="14" y="151" width="118" height="30"/>
+                            <slider opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Eof-7D-jWW">
+                                <rect key="frame" x="14" y="134" width="118" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="ControlOscillatorVolume:" destination="BYZ-38-t0r" eventType="valueChanged" id="Yje-yR-914"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="300" minValue="200" maxValue="1000" translatesAutoresizingMaskIntoConstraints="NO" id="ghu-Yv-7jS">
-                                <rect key="frame" x="14" y="212" width="118" height="30"/>
+                            <slider opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="300" minValue="100" maxValue="800" translatesAutoresizingMaskIntoConstraints="NO" id="ghu-Yv-7jS">
+                                <rect key="frame" x="14" y="277" width="118" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="ControlOscillatorFrequency:" destination="BYZ-38-t0r" eventType="valueChanged" id="q1u-mN-vFA"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="400" minValue="200" maxValue="2000" translatesAutoresizingMaskIntoConstraints="NO" id="xrO-vf-Ntg">
-                                <rect key="frame" x="243" y="212" width="118" height="30"/>
+                            <slider opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="400" minValue="200" maxValue="900" translatesAutoresizingMaskIntoConstraints="NO" id="xrO-vf-Ntg">
+                                <rect key="frame" x="14" y="366" width="118" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="ControlOscillatorFrequency:" destination="BYZ-38-t0r" eventType="valueChanged" id="btx-XU-2b7"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="300" minValue="50" maxValue="10000" translatesAutoresizingMaskIntoConstraints="NO" id="qy3-AR-RgO">
-                                <rect key="frame" x="14" y="420" width="347" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="ControlOscillatorFrequency:" destination="BYZ-38-t0r" eventType="valueChanged" id="n7X-HZ-Njj"/>
-                                </connections>
-                            </slider>
-                            <slider opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="NZL-Rm-ddR">
-                                <rect key="frame" x="243" y="151" width="118" height="30"/>
+                            <slider opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="NZL-Rm-ddR">
+                                <rect key="frame" x="14" y="222" width="118" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="ControlOscillatorVolume:" destination="BYZ-38-t0r" eventType="valueChanged" id="KS6-DI-173"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="D6j-a1-AqQ">
-                                <rect key="frame" x="14" y="249" width="118" height="30"/>
+                            <slider opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="D6j-a1-AqQ">
+                                <rect key="frame" x="14" y="314" width="118" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="ControlOscillatorVolume:" destination="BYZ-38-t0r" eventType="valueChanged" id="A2L-uP-jP0"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="3NQ-A3-0F8">
-                                <rect key="frame" x="243" y="249" width="118" height="30"/>
+                            <slider opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="3NQ-A3-0F8">
+                                <rect key="frame" x="14" y="403" width="118" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="ControlOscillatorVolume:" destination="BYZ-38-t0r" eventType="valueChanged" id="hVe-dh-DyG"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="RQL-fs-fGs">
-                                <rect key="frame" x="128" y="457" width="118" height="30"/>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="QDA-Kt-IFG">
+                                <rect key="frame" x="128" y="548" width="118" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="ControlOscillatorVolume:" destination="BYZ-38-t0r" eventType="valueChanged" id="xjP-hZ-j8d"/>
+                                    <action selector="ControlMixerVolume:" destination="BYZ-38-t0r" eventType="valueChanged" id="AtQ-wc-xwU"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="250" minValue="50" maxValue="8000" translatesAutoresizingMaskIntoConstraints="NO" id="EwJ-Md-QOb">
-                                <rect key="frame" x="14" y="320" width="347" height="30"/>
+                            <slider opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10000" minValue="10000" maxValue="12000" translatesAutoresizingMaskIntoConstraints="NO" id="XV7-QE-bvE">
+                                <rect key="frame" x="243" y="97" width="118" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="ControlOscillatorFrequency:" destination="BYZ-38-t0r" eventType="valueChanged" id="xUG-jl-R1R"/>
+                                    <action selector="ControlOscillatorFrequency:" destination="BYZ-38-t0r" eventType="valueChanged" id="Uwf-fj-pe9"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="iMm-wf-wuk">
-                                <rect key="frame" x="128" y="357" width="118" height="30"/>
+                            <slider opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="11000" minValue="11000" maxValue="13000" translatesAutoresizingMaskIntoConstraints="NO" id="m8B-SA-QXW">
+                                <rect key="frame" x="243" y="185" width="118" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="ControlOscillatorVolume:" destination="BYZ-38-t0r" eventType="valueChanged" id="ydF-lY-OiB"/>
+                                    <action selector="ControlOscillatorFrequency:" destination="BYZ-38-t0r" eventType="valueChanged" id="SMs-uK-xxb"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="5z3-SC-rh7">
+                                <rect key="frame" x="243" y="134" width="118" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="ControlOscillatorVolume:" destination="BYZ-38-t0r" eventType="valueChanged" id="XbK-Gb-I3h"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" tag="13" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="12000" minValue="12000" maxValue="14000" translatesAutoresizingMaskIntoConstraints="NO" id="BQ8-2E-nxY">
+                                <rect key="frame" x="243" y="277" width="118" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="ControlOscillatorFrequency:" destination="BYZ-38-t0r" eventType="valueChanged" id="9zu-GY-dgE"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" tag="15" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="14000" minValue="14000" maxValue="18000" translatesAutoresizingMaskIntoConstraints="NO" id="wpN-uf-s4P">
+                                <rect key="frame" x="243" y="366" width="118" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="ControlOscillatorFrequency:" destination="BYZ-38-t0r" eventType="valueChanged" id="G1O-qr-cE1"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Z6Q-RQ-5mb">
+                                <rect key="frame" x="243" y="222" width="118" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="ControlOscillatorVolume:" destination="BYZ-38-t0r" eventType="valueChanged" id="nDg-wz-t0Q"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" tag="14" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="TqL-Uu-B9x">
+                                <rect key="frame" x="243" y="314" width="118" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="ControlOscillatorVolume:" destination="BYZ-38-t0r" eventType="valueChanged" id="6hS-wn-2rs"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" tag="16" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="LIe-yf-t1d">
+                                <rect key="frame" x="243" y="403" width="118" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="ControlOscillatorVolume:" destination="BYZ-38-t0r" eventType="valueChanged" id="QoN-Ua-jM4"/>
                                 </connections>
                             </slider>
                         </subviews>
