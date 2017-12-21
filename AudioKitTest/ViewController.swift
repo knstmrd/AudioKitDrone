@@ -8,6 +8,7 @@
 
 import UIKit
 import AudioKit
+import AudioKitUI
 
 class ViewController: UIViewController {
     
@@ -32,6 +33,18 @@ class ViewController: UIViewController {
     
     var mixer = AKMixer()
     
+    @IBOutlet var audioInputPlot: EZAudioPlot!
+    func setupPlot() {
+        let plot = AKNodeOutputPlot(mixer, frame: audioInputPlot.bounds)
+        plot.plotType = .rolling
+        plot.contentScaleFactor = 0.3
+        plot.shouldFill = true
+        plot.shouldMirror = true
+        plot.backgroundColor = UIColor.black
+//        plot.color = UIColor.red
+        audioInputPlot.addSubview(plot)
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         mixer = AKMixer(osc1, osc2, osc3, osc4, osc5, osc6, osc7, osc8, osc9, osc10, osc11, osc12, osc13, osc14, osc15, osc16)
@@ -53,15 +66,25 @@ class ViewController: UIViewController {
         osc15.frequency = 14000
         osc16.frequency = 14000
         osclist = [osc1, osc2, osc3, osc4, osc5, osc6, osc7, osc8, osc9, osc10, osc11, osc12, osc13, osc14, osc15, osc16]
-        mixer.volume = 0.5;
+        mixer.volume = 0.5 / 12;
         AudioKit.output = mixer
         AudioKit.start()
     }
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        setupPlot()
+//        Timer.scheduledTimer(timeInterval: 0.1,
+//                             target: self,
+//                             selector: #selector(ViewController.updateUI),
+//                             userInfo: nil,
+//                             repeats: true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -87,7 +110,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func ControlMixerVolume(_ sender: UISlider!) {
-        mixer.volume = Double(sender.value) / 100
+        mixer.volume = Double(sender.value) / 100 / 12
     }
     
     @IBAction func SoundToggle(_ sender: Any) {
